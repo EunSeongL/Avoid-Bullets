@@ -49,9 +49,9 @@
   
 ## 🔑 주요 기능 및 로직 설명
 
-> 🔫 총알 및 개체 관련 함수
+> 🔫 총알 관련 함수
 ```c
-`static void Bullet_Init(QUERY_DRAW *b)`
+static void Bullet_Init(QUERY_DRAW *b)
 일반 총알은 20개, 큰 총알은 5개로 설정됩니다.
 4개의 모서리에서 랜덤으로 생성되며, 생성 위치에 따라 이동 방향이 결정됩니다.
 - 위에서 생성: ↙, ↓, ↘
@@ -59,6 +59,40 @@
 - 왼쪽에서 생성: ↗, →, ↘
 - 오른쪽에서 생성: ↖, ←, ↙
 ```
+
+> 🚀 개체 이동 관련 함수
+```c
+static int Bullet_Move(QUERY_DRAW *b)
+static int Big_Move(QUERY_DRAW *b)
+static int Enemy_Move(void)
+static int USER_Move(int k)
+일반 총알은 스테이지에 따라 이동 속도 및 각도 변경이 적용됩니다.
+큰 총알은 속도 1로 고정됩니다.
+따라다니는 총알은 사용자 위치로 따라가도록 로직이 설정되어 있습니다.
+```
+
+> 💥 충돌 확인 관련 함수
+```c
+static int Check_Collision(void)
+충돌 발생 시 생명 개수를 담당합니다.
+충돌 종류에 따른 생명력 변화는 다음과 같습니다.
+- 일반 총알과 충돌 시: **-1**
+- 큰 총알과 충돌 시: **-2**
+- 따라다니는 총알과 충돌 시: **-1**
+- 회복 아이템 충돌 시: **+1**
+생명이 0 이하가 되면 `GAME_OVER`를 반환합니다.
+```
+
+> 회복 아이템 생성 함수
+```c
+static void Reset_Life_Spawn(void)
+static void Spawn_Life_Item(void)
+- 생명 아이템이 생성될 위치, 시간을 무작위로 설정합니다.
+- 유지 시간은 메인 루프 안에서 10초 뒤에 사라지도록 설정됩니다.
+- 최대 생성수는 5개로 제한됩니다.
+```
+
+---
 
 ## 💻 핵심 코드
 
