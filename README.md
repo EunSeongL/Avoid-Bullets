@@ -2,7 +2,7 @@
 
 ![Thumbnail](img/thumbnail.png)
 
-## 📌 프로젝트 목적 / 소개
+## 📌 프로젝트 목표
 
 총알을 피하며 오래 생존하는 게임을 구현한 Arm-System-Programming 기반 프로젝트입니다.  
 게임 개발을 통해 ARM 시스템 프로그래밍과 C언어 활용 능력을 향상시키는 것이 목표입니다.
