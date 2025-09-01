@@ -38,6 +38,7 @@
 - 무작위로 총알이 날아오며, 플레이어는 조이스틱을 활용해 상하좌우로 이동하며 총알을 회피
 - Stage에 따라 총알의 속도와 패턴이 변화
 
+>Game Flow Chart
 ![Flow](img/gameflow.png)
 
 >### Stage별 총알
