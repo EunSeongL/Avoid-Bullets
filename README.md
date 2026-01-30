@@ -28,7 +28,6 @@ STM32 마이크로컨트롤러와 C 언어를 활용하여, 제한된 하드웨�
 * **Hardware**: STM32F103 (ARM Cortex-M3) Board, 320×240 LCD, CP2102 Driver
 * **Language**: C 
 * **Tool**: STM32CubeIDE, GCC Compiler 
-* **Communication**: UART (Baud rate 115,200) 
 
 ---
 
