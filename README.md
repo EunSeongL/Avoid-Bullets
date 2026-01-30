@@ -94,9 +94,9 @@ RS232-USB Bridge를 사용하여 디버깅 인터페이스를 구축했으며, �
 
 ### GPIO 및 입력 처리
 
-![alt text](img/exti.png)<br>
+![alt text](img/exti.png)
 
-![alt text](image.png)
+![alt text](img/exti1.png)
 
 * **EXTI**: 사용자 조이스틱 입력을 `EXTI9_5` IRQ Handler에서 처리하도록 구성 
 * **Pending 비트 관리**: 인터럽트 발생 후 `EXTI_PR` 레지스터의 5~7번 비트를 직접 클리어하여 관리 
